@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="Minimizing DOM access and markupWhenever you query the DOM to find elements, the browser must search the entire DOM tree for any matching elements. =&amp;gt; time waste Assembling and placing scriptsUsing">
+<meta name="description" content="1. Minimizing DOM access and markupWhenever you query the DOM to find elements, the browser must search the entire DOM tree for any matching elements. =&amp;gt; time waste 2. Assembling and placing script">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Performance Consideration in Book">
 <meta property="og:url" content="http://yoursite.com/2018/05/17/Performance-Consideration-in-Book/index.html">
 <meta property="og:site_name" content="Shizhe Zhou’s Blog">
-<meta property="og:description" content="Minimizing DOM access and markupWhenever you query the DOM to find elements, the browser must search the entire DOM tree for any matching elements. =&amp;gt; time waste Assembling and placing scriptsUsing">
+<meta property="og:description" content="1. Minimizing DOM access and markupWhenever you query the DOM to find elements, the browser must search the entire DOM tree for any matching elements. =&amp;gt; time waste 2. Assembling and placing script">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-05-18T03:49:29.758Z">
+<meta property="og:updated_time" content="2018-05-18T03:53:05.185Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Performance Consideration in Book">
-<meta name="twitter:description" content="Minimizing DOM access and markupWhenever you query the DOM to find elements, the browser must search the entire DOM tree for any matching elements. =&amp;gt; time waste Assembling and placing scriptsUsing">
+<meta name="twitter:description" content="1. Minimizing DOM access and markupWhenever you query the DOM to find elements, the browser must search the entire DOM tree for any matching elements. =&amp;gt; time waste 2. Assembling and placing script">
 
 
 
@@ -299,10 +299,10 @@
       
 
       
-        <h1 id="Minimizing-DOM-access-and-markup"><a href="#Minimizing-DOM-access-and-markup" class="headerlink" title="Minimizing DOM access and markup"></a>Minimizing DOM access and markup</h1><p>Whenever you query the DOM to find elements, the browser must search the entire DOM tree for any matching elements. =&gt; time waste</p>
-<h1 id="Assembling-and-placing-scripts"><a href="#Assembling-and-placing-scripts" class="headerlink" title="Assembling and placing scripts"></a>Assembling and placing scripts</h1><p>Using external files is the best solution for including JavaScript because it’s unobtrusive, it’s cleanly separated from the markup, and it allows the browser to reuse the same cached script on multiple pages of your site</p>
-<h1 id="Minification"><a href="#Minification" class="headerlink" title="Minification"></a>Minification</h1><p>Minification refers to the process of taking your script and “compressing” it by removing the unnecessary bits such as whitespace and comments. Thankfully, there are tools to do this for you. Some minimizers will even rewrite portions of your code to use shorter variable names. This reduces the overall file size.</p>
-
+        <h1 id="1-Minimizing-DOM-access-and-markup"><a href="#1-Minimizing-DOM-access-and-markup" class="headerlink" title="1. Minimizing DOM access and markup"></a>1. Minimizing DOM access and markup</h1><p>Whenever you query the DOM to find elements, the browser must search the entire DOM tree for any matching elements. =&gt; time waste</p>
+<h1 id="2-Assembling-and-placing-scripts"><a href="#2-Assembling-and-placing-scripts" class="headerlink" title="2. Assembling and placing scripts"></a>2. Assembling and placing scripts</h1><p>Using external files is the best solution for including JavaScript because it’s unobtrusive, it’s cleanly separated from the markup, and it allows the browser to reuse the same cached script on multiple pages of your site</p>
+<h1 id="3-Minification"><a href="#3-Minification" class="headerlink" title="3. Minification"></a>3. Minification</h1><p>Minification refers to the process of taking your script and “compressing” it by removing the unnecessary bits such as whitespace and comments. Thankfully, there are tools to do this for you. Some minimizers will even rewrite portions of your code to use shorter variable names. This reduces the overall file size.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">For example, suppose you have some code that looks like <span class="keyword">this</span>:</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">showPic</span>(<span class="params">whichpic</span>) </span>&#123;</span><br><span class="line"><span class="comment">// Grab the pics href attribute.</span></span><br><span class="line"><span class="keyword">var</span> source = whichpic.getAttribute(<span class="string">"href"</span>);</span><br><span class="line"><span class="comment">// Get the placeholder.</span></span><br><span class="line"><span class="keyword">var</span> placeholder = <span class="built_in">document</span>.getElementById(<span class="string">"placeholder"</span>);</span><br><span class="line"><span class="comment">// Update the placeholder source. placeholder.setAttribute("src",source);</span></span><br><span class="line"><span class="comment">// Update the text description using the image's title attribute. var text = whichpic.getAttribute("title");</span></span><br><span class="line"><span class="keyword">var</span> description = <span class="built_in">document</span>.getElementById(<span class="string">"description"</span>);</span><br><span class="line">&#125;</span><br><span class="line">The minified version would look like <span class="keyword">this</span>:</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">showPic</span>(<span class="params">a</span>)</span>&#123;<span class="keyword">var</span> b=a.getAttribute(<span class="string">"href"</span>);<span class="built_in">document</span>.get ➥ElementById(<span class="string">"placeholder"</span>).setAttribute(<span class="string">"src"</span>,b);a.getAttribute ➥ (<span class="string">"title"</span>);<span class="built_in">document</span>.getElementById(<span class="string">"description"</span>)&#125;;</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -461,7 +461,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Minimizing-DOM-access-and-markup"><span class="nav-number">1.</span> <span class="nav-text">Minimizing DOM access and markup</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Assembling-and-placing-scripts"><span class="nav-number">2.</span> <span class="nav-text">Assembling and placing scripts</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Minification"><span class="nav-number">3.</span> <span class="nav-text">Minification</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Minimizing-DOM-access-and-markup"><span class="nav-number">1.</span> <span class="nav-text">1. Minimizing DOM access and markup</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Assembling-and-placing-scripts"><span class="nav-number">2.</span> <span class="nav-text">2. Assembling and placing scripts</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-Minification"><span class="nav-number">3.</span> <span class="nav-text">3. Minification</span></a></li></ol></div>
             
 
           </div>
