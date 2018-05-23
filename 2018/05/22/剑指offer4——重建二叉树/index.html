@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="##输入某二叉树的前序遍历和中序遍历的结果，请重建出该二叉树。假设输入的前序遍历和中序遍历的结果中都不含重复的数字。例如输入前序遍历序列{1,2,4,7,3,5,6,8}和中序遍历序列{4,7,2,1,5,3,8,6}，则重建二叉树并返回。 运用递归思想， 很明显树的root是前序的第一个，然后通过在中序中找到相同值然后将左右子树分开。重点在递归时候的下标，在向下循环的时候 prestart 在增">
+<meta name="description" content="输入某二叉树的前序遍历和中序遍历的结果，请重建出该二叉树。假设输入的前序遍历和中序遍历的结果中都不含重复的数字。例如输入前序遍历序列{1,2,4,7,3,5,6,8}和中序遍历序列{4,7,2,1,5,3,8,6}，则重建二叉树并返回。运用递归思想， 很明显树的root是前序的第一个，然后通过在中序中找到相同值然后将左右子树分开。重点在递归时候的下标，在向下循环的时候 prestart 在增加但是">
 <meta name="keywords" content="Algorithm">
 <meta property="og:type" content="article">
 <meta property="og:title" content="剑指offer4——重建二叉树">
 <meta property="og:url" content="http://yoursite.com/2018/05/22/剑指offer4——重建二叉树/index.html">
 <meta property="og:site_name" content="Shizhe Zhou’s Blog">
-<meta property="og:description" content="##输入某二叉树的前序遍历和中序遍历的结果，请重建出该二叉树。假设输入的前序遍历和中序遍历的结果中都不含重复的数字。例如输入前序遍历序列{1,2,4,7,3,5,6,8}和中序遍历序列{4,7,2,1,5,3,8,6}，则重建二叉树并返回。 运用递归思想， 很明显树的root是前序的第一个，然后通过在中序中找到相同值然后将左右子树分开。重点在递归时候的下标，在向下循环的时候 prestart 在增">
+<meta property="og:description" content="输入某二叉树的前序遍历和中序遍历的结果，请重建出该二叉树。假设输入的前序遍历和中序遍历的结果中都不含重复的数字。例如输入前序遍历序列{1,2,4,7,3,5,6,8}和中序遍历序列{4,7,2,1,5,3,8,6}，则重建二叉树并返回。运用递归思想， 很明显树的root是前序的第一个，然后通过在中序中找到相同值然后将左右子树分开。重点在递归时候的下标，在向下循环的时候 prestart 在增加但是">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-05-23T04:22:08.000Z">
+<meta property="og:updated_time" content="2018-05-23T04:24:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="剑指offer4——重建二叉树">
-<meta name="twitter:description" content="##输入某二叉树的前序遍历和中序遍历的结果，请重建出该二叉树。假设输入的前序遍历和中序遍历的结果中都不含重复的数字。例如输入前序遍历序列{1,2,4,7,3,5,6,8}和中序遍历序列{4,7,2,1,5,3,8,6}，则重建二叉树并返回。 运用递归思想， 很明显树的root是前序的第一个，然后通过在中序中找到相同值然后将左右子树分开。重点在递归时候的下标，在向下循环的时候 prestart 在增">
+<meta name="twitter:description" content="输入某二叉树的前序遍历和中序遍历的结果，请重建出该二叉树。假设输入的前序遍历和中序遍历的结果中都不含重复的数字。例如输入前序遍历序列{1,2,4,7,3,5,6,8}和中序遍历序列{4,7,2,1,5,3,8,6}，则重建二叉树并返回。运用递归思想， 很明显树的root是前序的第一个，然后通过在中序中找到相同值然后将左右子树分开。重点在递归时候的下标，在向下循环的时候 prestart 在增加但是">
 
 
 
@@ -320,8 +320,7 @@
       
 
       
-        <p>##输入某二叉树的前序遍历和中序遍历的结果，请重建出该二叉树。假设输入的前序遍历和中序遍历的结果中都不含重复的数字。例如输入前序遍历序列{1,2,4,7,3,5,6,8}和中序遍历序列{4,7,2,1,5,3,8,6}，则重建二叉树并返回。</p>
-<p>运用递归思想， 很明显树的root是前序的第一个，然后通过在中序中找到相同值然后将左右子树分开。<br>重点在递归时候的下标，在向下循环的时候 prestart 在增加但是i会减少，所以用<br>prestart + i - instart 而不是 i+1<br>来定位左子树的结尾， 用这个的+1来定位右子树的开端  </p>
+        <h2 id="输入某二叉树的前序遍历和中序遍历的结果，请重建出该二叉树。假设输入的前序遍历和中序遍历的结果中都不含重复的数字。例如输入前序遍历序列-1-2-4-7-3-5-6-8-和中序遍历序列-4-7-2-1-5-3-8-6-，则重建二叉树并返回。"><a href="#输入某二叉树的前序遍历和中序遍历的结果，请重建出该二叉树。假设输入的前序遍历和中序遍历的结果中都不含重复的数字。例如输入前序遍历序列-1-2-4-7-3-5-6-8-和中序遍历序列-4-7-2-1-5-3-8-6-，则重建二叉树并返回。" class="headerlink" title="输入某二叉树的前序遍历和中序遍历的结果，请重建出该二叉树。假设输入的前序遍历和中序遍历的结果中都不含重复的数字。例如输入前序遍历序列{1,2,4,7,3,5,6,8}和中序遍历序列{4,7,2,1,5,3,8,6}，则重建二叉树并返回。"></a>输入某二叉树的前序遍历和中序遍历的结果，请重建出该二叉树。假设输入的前序遍历和中序遍历的结果中都不含重复的数字。例如输入前序遍历序列{1,2,4,7,3,5,6,8}和中序遍历序列{4,7,2,1,5,3,8,6}，则重建二叉树并返回。</h2><p>运用递归思想， 很明显树的root是前序的第一个，然后通过在中序中找到相同值然后将左右子树分开。<br>重点在递归时候的下标，在向下循环的时候 prestart 在增加但是i会减少，所以用<br>prestart + i - instart 而不是 i+1<br>来定位左子树的结尾， 用这个的+1来定位右子树的开端  </p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> TreeNode <span class="title">reConstructBinaryTree</span><span class="params">(<span class="keyword">int</span> [] pre,<span class="keyword">int</span> [] in)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> helper(pre, <span class="number">0</span>, pre.length-<span class="number">1</span>, in, <span class="number">0</span>, in.length-<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> TreeNode <span class="title">helper</span><span class="params">(<span class="keyword">int</span> [] pre, <span class="keyword">int</span> prestart, <span class="keyword">int</span> preend, <span class="keyword">int</span> [] in, <span class="keyword">int</span> instart, </span></span></span><br><span class="line"><span class="function"><span class="params">                          <span class="keyword">int</span> inend)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (prestart &gt; preend || instart &gt; inend) <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        TreeNode newnode = <span class="keyword">new</span> TreeNode(pre[prestart]);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = instart; i &lt;= inend; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (in[i] == pre[prestart]) &#123;</span><br><span class="line">                newnode.left = helper(pre, prestart + <span class="number">1</span>, prestart + i - instart, in, instart, i); <span class="comment">// 注意下标 是prestart + i - instart 不是 i</span></span><br><span class="line">                newnode.right = helper(pre, prestart + i - instart + <span class="number">1</span>, preend, in, i+<span class="number">1</span>, inend);       </span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> newnode;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
@@ -412,8 +411,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -468,6 +476,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#输入某二叉树的前序遍历和中序遍历的结果，请重建出该二叉树。假设输入的前序遍历和中序遍历的结果中都不含重复的数字。例如输入前序遍历序列-1-2-4-7-3-5-6-8-和中序遍历序列-4-7-2-1-5-3-8-6-，则重建二叉树并返回。"><span class="nav-number">1.</span> <span class="nav-text">输入某二叉树的前序遍历和中序遍历的结果，请重建出该二叉树。假设输入的前序遍历和中序遍历的结果中都不含重复的数字。例如输入前序遍历序列{1,2,4,7,3,5,6,8}和中序遍历序列{4,7,2,1,5,3,8,6}，则重建二叉树并返回。</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
