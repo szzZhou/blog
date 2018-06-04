@@ -249,6 +249,134 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/03/二叉树的遍历/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shizhe Zhou">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Shizhe Zhou’s Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/06/03/二叉树的遍历/" itemprop="url">二叉树的遍历</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-03T20:00:27-04:00">
+                2018-06-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="先序遍历"><a href="#先序遍历" class="headerlink" title="先序遍历"></a>先序遍历</h3><p>递归先序遍历</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">recursionPreorderTraversal</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (root != <span class="keyword">null</span>) &#123;</span><br><span class="line">        System.out.print(root.val + <span class="string">" "</span>);</span><br><span class="line">        recursionPreorderTraversal(root.left);</span><br><span class="line">        recursionPreorderTraversal(root.right);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>非递归先序遍历</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">preorderTraversal</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">    Stack&lt;TreeNode&gt; treeNodeStack = <span class="keyword">new</span> Stack&lt;TreeNode&gt;();</span><br><span class="line">    TreeNode node = root;</span><br><span class="line">    <span class="keyword">while</span> (node != <span class="keyword">null</span> || !treeNodeStack.isEmpty()) &#123;</span><br><span class="line">        <span class="keyword">while</span> (node != <span class="keyword">null</span>) &#123;</span><br><span class="line">            System.out.print(node.val + <span class="string">" "</span>);</span><br><span class="line">            treeNodeStack.push(node);</span><br><span class="line">            node = node.left;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (!treeNodeStack.isEmpty()) &#123;</span><br><span class="line">            node = treeNodeStack.pop();</span><br><span class="line">            node = node.right;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>中序遍历和先序处理的过程是一样的，但是是先储存再pop()出来输出<br>剑指offer中的题目二叉搜索树与双向链表就是针对中序遍历做的</p>
+<p>原题:<br>输入一棵二叉搜索树，将该二叉搜索树转换成一个排序的双向链表。要求不能创建任何新的结点，只能调整树中结点指针的指向。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">boolean</span> isroot = <span class="keyword">true</span>;</span><br><span class="line">    TreeNode root = <span class="keyword">null</span>;</span><br><span class="line">    TreeNode cur = <span class="keyword">null</span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> TreeNode <span class="title">Convert</span><span class="params">(TreeNode pRootOfTree)</span> </span>&#123;</span><br><span class="line">        helper(pRootOfTree);</span><br><span class="line">        <span class="keyword">return</span> root;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">helper</span><span class="params">(TreeNode p)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (p == <span class="keyword">null</span>) <span class="keyword">return</span> ;</span><br><span class="line">        helper(p.left);</span><br><span class="line">        <span class="keyword">if</span> (isroot) &#123;</span><br><span class="line">            isroot = <span class="keyword">false</span>;</span><br><span class="line">            root = p;</span><br><span class="line">            cur = p;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            cur.right = p;</span><br><span class="line">            p.left = cur;</span><br><span class="line">            cur = p;</span><br><span class="line">        &#125;</span><br><span class="line">        helper(p.right);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>后序遍历需要一个lastvisit来检验是不是已经访问过<br>lastVisit等于当前考查节点的右子树，表示该节点的左右子树都已经遍历完成，则可以输出当前节点。</p>
+<p>非递归后序遍历<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">postorderTraversal</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">    Stack&lt;TreeNode&gt; treeNodeStack = <span class="keyword">new</span> Stack&lt;TreeNode&gt;();</span><br><span class="line">    TreeNode node = root;</span><br><span class="line">    TreeNode lastVisit = root;</span><br><span class="line">    <span class="keyword">while</span> (node != <span class="keyword">null</span> || !treeNodeStack.isEmpty()) &#123;</span><br><span class="line">        <span class="keyword">while</span> (node != <span class="keyword">null</span>) &#123;</span><br><span class="line">            treeNodeStack.push(node);</span><br><span class="line">            node = node.left;</span><br><span class="line">        &#125;</span><br><span class="line">        node = treeNodeStack.peek();</span><br><span class="line">        <span class="keyword">if</span> (node.right == <span class="keyword">null</span> || node.right == lastVisit) &#123;</span><br><span class="line">            System.out.print(node.val + <span class="string">" "</span>);</span><br><span class="line">            treeNodeStack.pop();</span><br><span class="line">            lastVisit = node;</span><br><span class="line">            node = <span class="keyword">null</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            node = node.right;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/27/位运算笔记/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1290,7 +1418,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
