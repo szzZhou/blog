@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Algorithm,">
+  <meta name="keywords" content="Database,">
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="Insertion Sort 123456789101112function insertionSort(array) &amp;#123;    let s = array.length;    for (var i = 0; i &amp;lt; s; i++) &amp;#123;        var temp = array[i];        var j = i;        for (; j &amp;gt;">
-<meta name="keywords" content="Algorithm">
+<meta name="description" content="Prepare: DownloadDocker:Oracle image: alexeiled/docker-oracle-xe-11gNote: It’s important to run Oracle XE with &amp;gt;1GB shared memory. 1pull alexeiled/docker-oracle-xe-11g Start Oracle XERunning Oracle">
+<meta name="keywords" content="Database">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Sort Algorithm">
-<meta property="og:url" content="http://yoursite.com/2018/06/08/Sort-Algorithm/index.html">
+<meta property="og:title" content="Install OracleDB on Docker MAC">
+<meta property="og:url" content="http://yoursite.com/2018/10/30/Install-OracleDB-on-Docker-MAC/index.html">
 <meta property="og:site_name" content="Shizhe Zhou’s Blog">
-<meta property="og:description" content="Insertion Sort 123456789101112function insertionSort(array) &amp;#123;    let s = array.length;    for (var i = 0; i &amp;lt; s; i++) &amp;#123;        var temp = array[i];        var j = i;        for (; j &amp;gt;">
+<meta property="og:description" content="Prepare: DownloadDocker:Oracle image: alexeiled/docker-oracle-xe-11gNote: It’s important to run Oracle XE with &amp;gt;1GB shared memory. 1pull alexeiled/docker-oracle-xe-11g Start Oracle XERunning Oracle">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-06-10T00:51:14.260Z">
+<meta property="og:updated_time" content="2018-10-30T17:57:55.449Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Sort Algorithm">
-<meta name="twitter:description" content="Insertion Sort 123456789101112function insertionSort(array) &amp;#123;    let s = array.length;    for (var i = 0; i &amp;lt; s; i++) &amp;#123;        var temp = array[i];        var j = i;        for (; j &amp;gt;">
+<meta name="twitter:title" content="Install OracleDB on Docker MAC">
+<meta name="twitter:description" content="Prepare: DownloadDocker:Oracle image: alexeiled/docker-oracle-xe-11gNote: It’s important to run Oracle XE with &amp;gt;1GB shared memory. 1pull alexeiled/docker-oracle-xe-11g Start Oracle XERunning Oracle">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/06/08/Sort-Algorithm/">
+  <link rel="canonical" href="http://yoursite.com/2018/10/30/Install-OracleDB-on-Docker-MAC/">
 
 
 
 
 
-  <title>Sort Algorithm | Shizhe Zhou’s Blog</title>
+  <title>Install OracleDB on Docker MAC | Shizhe Zhou’s Blog</title>
   
 
 
@@ -253,7 +253,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/08/Sort-Algorithm/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/30/Install-OracleDB-on-Docker-MAC/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Shizhe Zhou">
@@ -270,7 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Sort Algorithm</h1>
+          <h1 class="post-title" itemprop="name headline">Install OracleDB on Docker MAC</h1>
         
 
         <div class="post-meta">
@@ -282,8 +282,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-08T17:52:06-04:00">
-                2018-06-08
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-10-30T13:40:51-04:00">
+                2018-10-30
               </time>
             
 
@@ -320,17 +320,18 @@
       
 
       
-        <ol>
-<li><p>Insertion Sort</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">insertionSort</span>(<span class="params">array</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> s = array.length;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; s; i++) &#123;</span><br><span class="line">        <span class="keyword">var</span> temp = array[i];</span><br><span class="line">        <span class="keyword">var</span> j = i;</span><br><span class="line">        <span class="keyword">for</span> (; j &gt; <span class="number">0</span>; j--) &#123;</span><br><span class="line">            <span class="keyword">if</span> (array[j<span class="number">-1</span>] &lt; temp) <span class="keyword">break</span>;</span><br><span class="line">            array[j] = array[j<span class="number">-1</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        array[j] = temp;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Bubble Sort </p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">bubbleSort</span>(<span class="params">array</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; array.length; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">var</span> j = i + <span class="number">1</span>; j &lt; array.length; j++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (array[j] &lt; array[j<span class="number">-1</span>]) &#123;</span><br><span class="line">                <span class="keyword">let</span> temp = array[j];</span><br><span class="line">                array[j] = array[j<span class="number">-1</span>];</span><br><span class="line">                array[j<span class="number">-1</span>] = temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>select sort</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">selectSort</span>(<span class="params">array</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; array.length; i++) &#123;</span><br><span class="line">        <span class="keyword">var</span> k = i;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">var</span> j = i+<span class="number">1</span>; j &lt; array.length; j++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (array[j] &lt; array[k]) &#123;</span><br><span class="line">                k = j;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">let</span> temp = array[k];</span><br><span class="line">        array[k] = array[i];</span><br><span class="line">        array[i] = temp;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
+        <p>Prepare:</p>
+<p>Download<br>Docker:<br>Oracle image: alexeiled/docker-oracle-xe-11g<br>Note: It’s important to run Oracle XE with &gt;1GB shared memory.</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pull alexeiled/docker-oracle-xe-11g</span><br></pre></td></tr></table></figure>
+<p>Start Oracle XE<br>Running Oracle XE in detached mode with 1521 and 8080 ports opened and 2GB shared memory:</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --shm-size=2g -p 1521:1521 -p 8080:8080 alexeiled/docker-oracle-xe-11g</span><br></pre></td></tr></table></figure>
+<p>Open a new shell and trying to login into the container bash<br>Beacuse we need to using the SQL shell (sqlplus)</p>
+<p>firstly find the CONTAINER ID of the Oracle<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker ps</span><br></pre></td></tr></table></figure></p>
+<p>go to the bash</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> -it [CONTAINER ID] /bash/bin</span><br></pre></td></tr></table></figure>
+<p>Connect<br>Connect database with following setting:</p>
+<p>hostname: localhost<br>port: 1521<br>sid: xe<br>username: system<br>password: oracle<br>Password for SYS user</p>
+<p>oracle<br>Connect to Oracle Application Express web management console with following settings:<br>url: <a href="http://localhost:8080/apex" target="_blank" rel="noopener">http://localhost:8080/apex</a><br>workspace: internal<br>user: admin<br>password: oracle</p>
 
       
     </div>
@@ -348,7 +349,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Algorithm/" rel="tag"># Algorithm</a>
+            <a href="/tags/Database/" rel="tag"># Database</a>
           
         </div>
       
@@ -361,8 +362,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/06/07/Comparator-in-java/" rel="next" title="Comparator in java">
-                <i class="fa fa-chevron-left"></i> Comparator in java
+              <a href="/2018/07/24/HashSet-TreeSet-and-LinkedHashSet/" rel="next" title="HashSet, TreeSet and LinkedHashSet">
+                <i class="fa fa-chevron-left"></i> HashSet, TreeSet and LinkedHashSet
               </a>
             
           </div>
@@ -370,10 +371,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/06/13/Box-model-in-CSS/" rel="prev" title="Box model in CSS">
-                Box model in CSS <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
