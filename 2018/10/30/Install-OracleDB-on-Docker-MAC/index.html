@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Shizhe Zhou’s Blog">
 <meta property="og:description" content="Prepare: DownloadDocker:Oracle image: alexeiled/docker-oracle-xe-11gNote: It’s important to run Oracle XE with &amp;gt;1GB shared memory. 1pull alexeiled/docker-oracle-xe-11g Start Oracle XERunning Oracle">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-10-30T17:57:55.449Z">
+<meta property="og:updated_time" content="2018-10-31T15:14:13.369Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Install OracleDB on Docker MAC">
 <meta name="twitter:description" content="Prepare: DownloadDocker:Oracle image: alexeiled/docker-oracle-xe-11gNote: It’s important to run Oracle XE with &amp;gt;1GB shared memory. 1pull alexeiled/docker-oracle-xe-11g Start Oracle XERunning Oracle">
@@ -328,7 +328,7 @@
 <p>Open a new shell and trying to login into the container bash<br>Beacuse we need to using the SQL shell (sqlplus)</p>
 <p>firstly find the CONTAINER ID of the Oracle<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker ps</span><br></pre></td></tr></table></figure></p>
 <p>go to the bash</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> -it [CONTAINER ID] /bash/bin</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> -it [CONTAINER ID] /bin/bash</span><br></pre></td></tr></table></figure>
 <p>Connect<br>Connect database with following setting:</p>
 <p>hostname: localhost<br>port: 1521<br>sid: xe<br>username: system<br>password: oracle<br>Password for SYS user</p>
 <p>oracle<br>Connect to Oracle Application Express web management console with following settings:<br>url: <a href="http://localhost:8080/apex" target="_blank" rel="noopener">http://localhost:8080/apex</a><br>workspace: internal<br>user: admin<br>password: oracle</p>
